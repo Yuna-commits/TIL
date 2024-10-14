@@ -56,6 +56,7 @@ void bfs() {
 ```
 void dijkstra() {
         priority_queue<pair<int, pair<int, int>>> que;
+        /*push(-1 * 해당 정점까지 저장된 최단거리, 정점의 좌표)*/
         que.push({ -1 * cave[0][0], {0,0} });
         dist[0][0] = cave[0][0];
         while (!que.empty()) {
