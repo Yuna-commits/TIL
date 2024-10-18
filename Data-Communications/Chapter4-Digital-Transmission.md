@@ -52,7 +52,7 @@
 
 ### Line Coding의 종류
 
-    <p align="center"><img src="">
+<p align="center"><img src="https://velog.velcdn.com/images%2F00springbom00%2Fpost%2F9a091d39-74a3-4991-b43f-797391f23625%2Fimage.png">
 
 #### Unipolar : NRZ
 - Non-Return-to-Zero
