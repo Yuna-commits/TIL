@@ -104,8 +104,8 @@
 
 - 다음 비트가 1이면 전압 변화를 주고 0이면 변화를 주지 않음
 
-<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FD2NXH%2FbtscfBmQyFh%2Fl1kSQ9e17z2AWHiUCSWuCk%2Fimg.png">
-
+<p align="left"><img width="150" height="200" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FD2NXH%2FbtscfBmQyFh%2Fl1kSQ9e17z2AWHiUCSWuCk%2Fimg.png">   
+    
 - 0으로 시작하는 부분에선 inversion이 먼저 일어남
 
 ### Bipolar : AMI, Pseudoternary
