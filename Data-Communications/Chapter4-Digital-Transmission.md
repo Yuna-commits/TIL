@@ -52,7 +52,7 @@
 
 ### Line Coding의 종류
 
-    <p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FYFs7M%2Fbtr7R41G87y%2F3Iw4kFkHONMeaOUecZPXoK%2Fimg.png">
+    <p align="center"><img src="">
 
 #### Unipolar : NRZ
 - Non-Return-to-Zero
@@ -153,7 +153,7 @@
     2. 다음 비트가 1인데 현재 전압이 0이 아니면 다음 전압은 0
     3. 다음 비트가 1인데 현재 전압이 0이면 다음 전압은 가장 최근에 보낸 0이 아닌 신호의 반대 전압을 사용
 
-    <p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbZRYyC%2Fbtr7StWeBSt%2FTkKegR3r1xLxCThVhCK5j0%2Fimg.png">
+<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbZRYyC%2Fbtr7StWeBSt%2FTkKegR3r1xLxCThVhCK5j0%2Fimg.png">
 
 - 평균 Signal rate = Bit rate / 3 = Bandwidth (c = 1 / 3, r = 1)
 
@@ -260,3 +260,33 @@
 
 <p align="center"><img src="https://prodiffs.com/storage/img/images_1/difference-between-synchronous-and-asynchronous-transmission_2.jpg">
 
+## Parallel Transmission
+- n bit를 전송하기 위해 n개의 전선 사용
+- 빠르지만 전선 개수만큼 비용이 증가하기 때문에 단거리에만 사용
+
+<p align="center"><img src="https://velog.velcdn.com/images%2F00springbom00%2Fpost%2F1f62726d-e408-4a46-8246-de56503c83bd%2Fimage.png">
+
+## Serial Transmission
+- 하나의 링크로 데이터 전송
+
+<p align="center"><img src="https://velog.velcdn.com/images%2F00springbom00%2Fpost%2Fe1c0b217-7654-4ce1-8dbc-c223c29c4b83%2Fimage.png">
+
+### Asynchronous Transmission
+
+<p align="center"><img src="https://velog.velcdn.com/images%2F00springbom00%2Fpost%2F453528c7-ba1f-48fb-af04-0ea6cb1293ea%2Fimage.png">
+
+- 1 start bit + 1 stop bit + 5~8 bit data 구조
+- start bit가 새 데이터 그룹이 도착했음을 알림
+- stop bit가 한 byte 수신이 완료됐음을 알림
+- 각 바이트를 수신할 때마다 start/stop bit로 동기화
+- 1 또는 그 이상의 stop bit로 각 byte 사이에 gaps 존재
+- Asynchronous(비동기)는 byte 수준에서비동기, bit들은 동기화 됨
+
+### Synchronous Transmission
+
+<p align="center"><img src="https://velog.velcdn.com/images%2F00springbom00%2Fpost%2F83b74c74-5fa1-49a6-9ab9-a540fb531044%2Fimage.png">
+
+- start/stop bit 없이 데이터 전송, 일정한 타이밍이 필요
+- byte 사이에 gap 없음
+- 비동기식에 비해 속도가 빠름
+- data link layer에서 Byte synchronization 사용
