@@ -156,3 +156,107 @@
     <p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbZRYyC%2Fbtr7StWeBSt%2FTkKegR3r1xLxCThVhCK5j0%2Fimg.png">
 
 - 평균 Signal rate = Bit rate / 3 = Bandwidth (c = 1 / 3, r = 1)
+
+## Block Coding
+- Block Coding은 동기화나 오류 검출에 특화된 방법
+- 여분의 정보(redundant bit)를 데이터에 포함하여 동기화나 오류 검출
+
+<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FKIDzL%2Fbtr72ZmYWR2%2FUTTQzo1Zev74C9lLvHE9R1%2Fimg.png">
+
+- mB / nB coding은 m bit로 이루어진 데이터를 n bit로 변환, 기존 m개의 bit에 여분의 비트를 더했기 때문에 항상 (n > m)
+
+### 4B / 5B
+- 4bit의 데이터를 보낼 때 NRZ-I Line coding을 사용하는 경우 나타나는 문제점을 해결하기 위해 사용
+    - NRZ-I의 문제 : 연속된 1은 DC 성분 제거가 가능했지만 연속된 0은 전압을 바꾸지 않기 때문에 DC 성분이 그대로 존재
+    - 4bit로 된 데이터를 5bit로 다시 표현하여 해결
+    <p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fsv2W3%2Fbtr73yvH3ha%2FEO6NPgAqFL69eDgcwV5moK%2Fimg.png">
+
+## Scrambling
+- AMI encoding은 BW가 낮고 DC 성분이 존재하지 않지만 동기화 문제가 남아있음
+- AMI encoding의 연속된 0으로 생기는 동기화 문제를 해결하기 위해 사용
+- 주로 장거리 통신에 사용됨
+- Design Goal
+    - No DC Components
+    - No long sequences of zero level line signal
+    - No reduction in data rate
+    - error detection capability
+
+### B8ZS
+- Bipolar with 8 Zero Substitution
+- 8개의 연속된 0을 000VB0VB 신호로 대체
+
+ <p align="center"><img src="https://velog.velcdn.com/images%2F00springbom00%2Fpost%2Feb1f778a-adf4-43ed-bd26-24e38f28ebc5%2Fimage.png">
+
+ ### HDB3
+ - High-Density Bipolar 3-zero
+ - 4개의 연속된 0을 대체
+    - 0이 아닌 펄스의 개수가 홀수면 000V로 대체
+    - 0이 아닌 펄스의 개수가 짝수면 B00V로 대체
+
+ <p align="center"><img src="https://velog.velcdn.com/images%2F00springbom00%2Fpost%2Fb53c8269-9a04-4b68-bf50-d03f0659ac07%2Fimage.png">
+
+
+# 4.2 Analog-to-Digital Conversion
+## PCM
+- Pulse Code Modulation
+- Analog signal을 Digital data로 변환하는 방법
+
+ <p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FYWifq%2Fbtr77P3VGtA%2FcYckDJFKvHqTjg04Ce3sb0%2Fimg.png">
+
+### Step 1 : Sampling
+- 일정한 간격으로 신호의 진폭 구하기
+- PAM : Pulse amplitude modulation
+
+<p align="center"><img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fdatacommandnet.blogspot.com%2Fp%2Fanalog-to-digital-conversion.html&psig=AOvVaw0FLfZjhc1mVjHNMmfcYG0o&ust=1729355458729000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJD2z6OtmIkDFQAAAAAdAAAAABAJ">
+
+<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FZVPbe%2Fbtr726M0yX2%2FBMTAyY1XuHkrCA3QDY2XtK%2Fimg.png">
+
+- 위의 그림에서 +값은 0 ~ 4단계를 거치고 -값은 -4 ~ 0단계를 거침
+- -4~4 사이의 값을 갖도록 정규화(Normalization), 값을 5로 나눔
+
+<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FuPzxE%2Fbtr724PcCZc%2FG0klwKpcSCkw01IDN67CTk%2Fimg.png">
+
+- Normalized PAM values는 sampling한 값들을 정규화했다는 의미
+
+#### Sampling Rate
+- Nyquist rate
+- sampling rate는 최대 Bandwidth의 최소 2배가 되어야 함
+
+<p align="center"><img src="https://velog.velcdn.com/images%2F00springbom00%2Fpost%2Fec588cbe-55e7-4aa4-b5f8-2d73f1c46668%2Fimage.png">
+
+### Step 2 : Quantizing
+- 양자화 : 연속적인 Analog 값을 이산적인 Digital로 변환
+
+<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fusgwo%2Fbtr726faQEY%2FF0wTloOQyHimsx1YBhuFH1%2Fimg.png">
+
+- Quantization Code
+    - Quantization Level을 정하여 -4 ~ 4단계를 0 ~ L-1로 표현
+    - L이 낮으면 신호의 변동이 많을 경우 Quantization Error 증가
+
+- Quantization Error
+    - SNR db = 6.02 * nb + 1.76 (dB)
+    - nb : bits per sample, log2L
+    - ex) Quantization Level = 8, nb = 3
+
+### Step 3 : Encoding
+
+<p align="center"><img src="https://velog.velcdn.com/images%2F00springbom00%2Fpost%2F4a706aba-b66c-41bd-9804-6bab1bcdec59%2Fimage.png">
+
+- Quantization code를 2진수로 변환
+- Bit rate = sampling rate * number of bits per sample
+           = fs * nb
+           = 2 * BW * nb
+
+## DM
+- Delta Modulation
+
+<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FLcboO%2Fbtr73oNyqR3%2FV9mnqkILlYKehA4K5xoIr1%2Fimg.png">
+
+
+- Analog signal을 PAM 과정을 거쳐 digital data로 Encoding
+- Encoding 한 Digital data를 Line Coding하여 Digital signal로 변환
+
+# 4.3 Transmission Modes
+
+<p align="center"><img src="https://prodiffs.com/storage/img/images_1/difference-between-synchronous-and-asynchronous-transmission_2.jpg">
+
