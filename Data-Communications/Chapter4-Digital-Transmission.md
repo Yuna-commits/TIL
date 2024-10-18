@@ -10,7 +10,7 @@
 # 4.1 Digital-to-Digital Conversion
 - Data element vs Signal element
 
-    <p align="center"><img src="https://velog.velcdn.com/images%2F00springbom00%2Fpost%2F564e8cce-f909-4cd7-b5c2-6d10e4b9003f%2Fimage.png">
+    <p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdaexNC%2Fbtr7LrKUN9q%2FkqIaH8jEM8wRwrW6tJryxk%2Fimg.png">
 
     - r = data elements/signal elements
     - 몇 개의 data를 몇 개의 signal로 보낼 수 있는가?/표현할 수 있는가?
