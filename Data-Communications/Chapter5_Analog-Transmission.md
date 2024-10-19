@@ -14,11 +14,9 @@
 - analog signal을 Demodulation해서 다시 digital data로 수신
 - digital data의 정보를 기반으로 analog signal의 특성(Amplitude, Frequency, Phase)을 변환
 
-## Digital-to-Analog Conversion
-
 <p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcfeLM2%2Fbtr9rhrcENu%2FThk9ESGFXzYhnf8ZYiDb4K%2Fimg.png">
 
-### ASK
+## ASK
 
 <p align="center"><img src="https://velog.velcdn.com/images%2F00springbom00%2Fpost%2Fc953ae07-7f4d-41db-8bd6-6899a66e00b3%2Fimage.png">
   
@@ -39,7 +37,7 @@
   - 보통 full-duplex link를 사용하기 때문에 2개의 carrier frequency로 bandwidth를 둘로 나눔, 왼쪽 : tx, 오른쪽 : rx
   - 만약 fc1과 fc2가 너무 가까이 있으면 신호의 간섭이 발생, 더 큰 진폭이 나타날 수 있음
 
-### FSK
+## FSK
 
 <p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbUSIya%2Fbtr9rgFRfAI%2Fceb906C8PqiZpGurreu7rk%2Fimg.png">
 
@@ -53,7 +51,7 @@
     - f max도 f2로부터 (1 + d) * signal rate / 2만큼 차이
     - f2 - f1 = 2 * df
    
-### PSK
+## PSK
 
 <p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F16kaH%2Fbtr9pccTYt7%2FQ3KRFkehlxbhjzNfXml8l0%2Fimg.png">
 
@@ -64,7 +62,7 @@
   - fsk만큼의 bandwidth 제한 x
   - Bandwidth = (1 + d) * Signal rate
 
-#### QPSK
+## QPSK
    - 4 - PSK, signal level = 4, 1 signal이 2 bit를 받음
    - phase가 90도 차이로 변화
    - r = 2 -> Signal rate = Bit rate / 2
@@ -102,3 +100,4 @@
 ## Bit / Baud Comparison
 ![image](https://github.com/user-attachments/assets/8c0229be-a729-40e7-85b5-fb6af90d1f13)
 
+# 5.2 Analog-to-Analog Conversion
