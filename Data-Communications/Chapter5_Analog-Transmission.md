@@ -99,5 +99,6 @@
 - 왼쪽 : 4 - QAM (1 amplitude, 4 phase)
 - 오른쪽 : 8 - QAM (2 amplitude, 4 phase)
 
-## 
-<p align="center"><![image](https://github.com/user-attachments/assets/9eb11c6f-2d50-4193-936a-99e374ad7b6d)>
+## Bit / Baud Comparison
+![image](https://github.com/user-attachments/assets/8c0229be-a729-40e7-85b5-fb6af90d1f13)
+
