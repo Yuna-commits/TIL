@@ -88,11 +88,13 @@
 
 ## QAM
 - Quadrature Amplitude Modulation
-- ASK + PSK, x : phase 변화, y : amplitude 변화
+- (bit, dibit, tribit...) 각 단 간의 최대 대조가 되도록 ASK + PSK 조합
+- x : phase 변화, y : amplitude 변화
 - ASK보다 노이즈에 덜 민감
 - ASK, PSK와 같은 Bandwidth 필요
 
-<p align="center"><img src="https://www.researchgate.net/profile/Diponkor-Bala/publication/348364945/figure/fig13/AS:978360553447425@1610270741941/Constellation-diagram-of-4-QAM-and-8-QAM.png">
+![image](https://github.com/user-attachments/assets/7b0f85c4-778f-4f29-b3cc-6b0556ee02aa)
+
 
 - 왼쪽 : 4 - QAM (1 amplitude, 4 phase)
 - 오른쪽 : 8 - QAM (2 amplitude, 4 phase)
@@ -101,3 +103,75 @@
 ![image](https://github.com/user-attachments/assets/8c0229be-a729-40e7-85b5-fb6af90d1f13)
 
 # 5.2 Analog-to-Analog Conversion
+- analog signal에 의한 analog 정보 표현
+- 왜 analog signal을 또 analog signal로 변조해야 하는가?
+    - medium이 본질적으로 bandpass, 특정 frequency 사이 신호만 통과시키거나 그런 채널만 사용할 수 있는 경우에 변조가 필요
+    - ex) 라디오는 baseband analog signal -> AM, FM, PM으로 modulation해서 들을 수 있음
+
+<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdUxXYZ%2Fbtr9eB6tojr%2FEpOIJVlqdf9UrhIZ6VcFU0%2Fimg.png">
+
+## AM
+
+<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FEszet%2Fbtr9pdpkZle%2FQFSfReI5IuIermmJj1e36k%2Fimg.png">
+
+- Amplitude Modulation
+- 보내려는 analog signal(Modulating signal)을 carrier signal에 더해서 amplitude을 변화시킴
+- carrier signal의 형태를 modulating signal의 형태에맞춰 변조 
+- 변조된 신호의 frequency == carrier signal frequency(fc)
+- carrier frequency 530kHz ~ 1700 kHz
+- AM 라디오에선 한 채널당 10 kHz씩 할당받아서 사용
+- amplitude 변조는 잡음이나 간섭 영향을 쉽게 받음, 음질이 좋지 않음
+
+## AM Bandwidth
+- f max = fm + fc, f min = fc - fm
+- Bandwidth = f max - f min = 2 * fm, 원래 신호가 가지고 있는 bandwidth의 2배
+![image](https://github.com/user-attachments/assets/1e213b57-a079-4d43-bbd3-6b37af55d42a)
+
+## FM
+
+<p align="center"><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbITFdI%2Fbtr9kPDj8RW%2F0lqiq8Y2R8y8GJ3kiDV6FK%2Fimg.png">
+
+- Frequency Modulation
+- modulating signal의 amplitude의 크기에 비례하여 carreir signal의 frequency 변화
+- amplitude이 크면 frequency 높게, amplitude이 작으면 frequency 낮게 변조
+- carrier frequency 88 MHz ~ 108 MHz
+- FM 라디오에선 한 채널당 200 kHz씩 할당받아서 사용
+
+## FM Bandwidth
+- 원래 신호가 가지고 있는 bandwidth의 10배
+- frequency 변조이므로 AM보다 bandwidth 크기가 훨씬 큼
+![image](https://github.com/user-attachments/assets/e79c92ec-da4b-46c7-af79-c527f571b6d5)
+
+## PM
+
+<p align="center"><img src="https://velog.velcdn.com/images%2F00springbom00%2Fpost%2Fee500842-e7db-4e21-866f-8ada945d6e14%2Fimage.png">
+
+- Phase Modulation
+- modulating signal의 amplitude의 변화량 비례하여 carreir signal의 phase 변화
+- sine wave에서 phase가 커지면 그래프가 왼쪽으로 이동
+- amplitude가 빠르게 커지면 그에 따라 phase도 빠르게 변화, 신호가 왼쪽으로 몰린 것처럼 보임
+- amplitude가 빠르게 변화 -> frequency도 높아짐
+- amplitude가 느리게 변화 -> 원래 carrier signal의 frequency로 돌아옴
+
+## FM vs PM
+- FM은 modulating signal의 amplitude 크기에 비례하여 frequency 변화
+- PM은 modulating signal의 amplitude 변화량에 비례하여 phase 변화 -> frequency 변화
+
+## Summary
+- Digital data -> Digital signal
+    - PC -> 근처 디바이스, dedicated link, 1 대 1 연결
+    - Baseband transmission 사용
+  
+- Analog data -> Digital signal
+    - Voice -> PC
+    - microphone
+  
+- Digital data -> Analog signal
+    - PC -> channel로 연결된 모든 것
+    - Email
+    - Bandpass transmission 사용
+
+- Analog data -> Analog signal
+    - Voice -> channel로 연결된 모든 것
+    - Radio broadcasting(AM, FM)
+    - Bandpass transmission 사용
