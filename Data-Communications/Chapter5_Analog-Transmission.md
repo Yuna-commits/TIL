@@ -116,7 +116,7 @@
 
 - Amplitude Modulation
 - 보내려는 analog signal(Modulating signal)을 carrier signal에 더해서 amplitude을 변화시킴
-- carrier signal의 형태를 modulating signal의 형태에맞춰 변조 
+- carrier signal의 형태를 modulating signal의 형태에 맞춰 변조 
 - 변조된 신호의 frequency == carrier signal frequency(fc)
 - carrier frequency 530kHz ~ 1700 kHz
 - AM 라디오에선 한 채널당 10 kHz씩 할당받아서 사용
@@ -125,6 +125,7 @@
 ## AM Bandwidth
 - f max = fm + fc, f min = fc - fm
 - Bandwidth = f max - f min = 2 * fm, 원래 신호가 가지고 있는 bandwidth의 2배
+
 ![image](https://github.com/user-attachments/assets/1e213b57-a079-4d43-bbd3-6b37af55d42a)
 
 ## FM
@@ -140,6 +141,7 @@
 ## FM Bandwidth
 - 원래 신호가 가지고 있는 bandwidth의 10배
 - frequency 변조이므로 AM보다 bandwidth 크기가 훨씬 큼
+
 ![image](https://github.com/user-attachments/assets/e79c92ec-da4b-46c7-af79-c527f571b6d5)
 
 ## PM
