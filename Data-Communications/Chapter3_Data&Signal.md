@@ -5,8 +5,8 @@
     
 - Signal
   
-<p align="center"><img width="400" height="200" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbeYK9y%2Fbtr9BHqgvEm%2Frjf9creJAWAP198lji8aGk%2Fimg.png">
-<p align="center"><img width="400" height="200" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FchjefS%2Fbtr9z8B94Z2%2Fzu7Bhck0LCk33EUxHVqLu1%2Fimg.png">
+<img width="400" height="200" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbeYK9y%2Fbtr9BHqgvEm%2Frjf9creJAWAP198lji8aGk%2Fimg.png">
+<img width="400" height="200" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FchjefS%2Fbtr9z8B94Z2%2Fzu7Bhck0LCk33EUxHVqLu1%2Fimg.png">
 
   - analog signal
       - infinite nuber of values
@@ -27,13 +27,13 @@
 ## Feature of analog signal
 1. Amplitude(진폭)
 
-<p align="center"><img width="600" height="400" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FkAIcj%2Fbtr9AtMSSRj%2F6GnlrzL9kuR4vHbk8mKrZ1%2Fimg.png">
+<img width="600" height="400" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FkAIcj%2Fbtr9AtMSSRj%2F6GnlrzL9kuR4vHbk8mKrZ1%2Fimg.png">
 
 - peak amplitude는 sine wave에서 전압이 가장 클 때를 의미
 
 2. Frequency(주파수, 진동수)
 
-<p align="center"><img width="600" height="400" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FciIruD%2Fbtr9sf20sf2%2F4tDKQznaoldkgwz5fkO8Ak%2Fimg.png">
+<img width="600" height="400" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FciIruD%2Fbtr9sf20sf2%2F4tDKQznaoldkgwz5fkO8Ak%2Fimg.png">
 
 - 1초에 나타난 cycle의 개수
 - 위 그림은 1초에 12번의 cycle이 돌아감 -> frequency 12 Hz
@@ -50,7 +50,7 @@
 
 3. Phase(위상)
 
-<p align="center"><img width="600" height="400" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbsO7HJ%2Fbtr9MoLaGFJ%2FPaqnI4CPM9IKVHzxqSkWl1%2Fimg.png">
+<img width="600" height="400" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbsO7HJ%2Fbtr9MoLaGFJ%2FPaqnI4CPM9IKVHzxqSkWl1%2Fimg.png">
 
 - 기본 sine wave형태에서 x축으로의 이동 정도
 - s(t) = A * sin(2π * f * t + Φ)
