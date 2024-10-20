@@ -88,7 +88,7 @@
 
 ## QAM
 - Quadrature Amplitude Modulation
-- (bit, dibit, tribit...) 각 단 간의 최대 대조가 되도록 ASK + PSK 조합
+- (bit, dibit, tribit...) 각 단위 간의 최대 대조가 되도록 ASK + PSK 조합
 - x : phase 변화, y : amplitude 변화
 - ASK보다 노이즈에 덜 민감
 - ASK, PSK와 같은 Bandwidth 필요
